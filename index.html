@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Tip calculator app</title>
+
+</head>
+<body>
+
+<div class="main_container">
+
+    <div class="main_title"><h2 class="splitter" >SPLI <br> TTER</h2></div>
+
+    <div class="calculator_container">
+
+      <div class="main_content">
+        
+        <!-- ======= IZQUIERDA ====== -->
+
+        <div class="left">
+           <!-- ==== CONTENEDOR DE BILL -->
+      <div class="bill_container">
+        <div class="bill_text">
+        <h3 class="subtitle">Bill</h3> 
+        <h4 id="error-bill" class="error_text subtitle">Can't be zero</h4>
+      </div>
+        <input class="input_n" type="number" name="" value="" id="bill" oninput=billInput()>
+      </div>
+
+
+      <!-- ==== CONTENEDOR DE TIPS ==== -->
+      <div class="tip_container">
+        <h3 class="subtitle">Select Tip %</h3>
+        <div class="btns_container">
+          <!--  onclick="totalTip(event)" -->
+          <button class="btn_tip" value="5" onclick=tipInput(event) >5%</button>
+          <button class="btn_tip" value="10" onclick=tipInput(event) >10%</button>
+          <button class="btn_tip" value="15" onclick=tipInput(event) >15%</button>
+          <button class="btn_tip" value="25" onclick=tipInput(event) >25%</button>
+          <button class="btn_tip" value="50" onclick=tipInput(event)>50%</button>
+          <input type="number" placeholder="Custom" class="custom_tip btn_tip" value="" name="" id="custom-tip" oninput=tipInput(event)  >
+        </div>
+      </div>
+
+      <!-- ==== CONTENEDOR DE PEOPLE ==== -->
+          <div class="bill_container">
+            <div class="bill_text">
+              <h3 class="subtitle">Number of People</h3>
+              <h4 id="error-people" class="error_text subtitle">Can't be zero</h4>
+            </div>
+            <input type="number" class="input_n" value="" name="" id="people" oninput="peopleInput(event)">
+          </div>
+
+
+        </div>
+
+      <!-- ====== DERECHA ===== -->
+      <div class="right">
+        <!-- ==== CONTENEDOR DE TOTALES ==== -->
+        <div class="total_container">
+          <!-- === TIP AMOUNT === -->
+          <div class="amount_tip">
+  
+            <div class="total_text">
+              <h3 class="title_total">Tip Amount <br> <span>/ person</span> </h3>
+            </div>
+  
+            <div class="total">
+              <h2 class="total_number" id="tip_amount">$0.00</h2>
+            </div>
+          </div>
+  
+          <!-- === TIP AMOUNT === -->
+          <div class="amount_tip bottom">
+  
+            <div class="total_text">
+              <h3 class="title_total">Total<br> <span>/ person</span> </h3>
+            </div>
+  
+            <div class="total">
+              <h2 class="total_number" id="total">$0.00</h2>
+            </div>
+  
+          </div>
+  
+          <!-- BOTON DE RESET -->
+          <div class="btn_container">
+            <button class="btn" onclick=resetAll()>RESET</button>
+          </div>
+          
+        </div>
+      </div>
+
+      </div>
+
+  </div>
+
+</div>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="main.js"></script>
+ <!--  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+</body>
+</html>
